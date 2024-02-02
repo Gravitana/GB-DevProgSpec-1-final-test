@@ -5,6 +5,7 @@ import Data.DataSeeder;
 import Model.*;
 import View.View;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,11 +17,29 @@ public class Presenter {
     }
 
     public void start() {
+        List<Animal> animals;
+        boolean appRunning = true;
+
         view.showWelcome();
 
-        List<Animal> animals = new DataSeeder().getAnimals();
+        String userInput = getUserInput("Заполнить реестр готовым списком животных? (д/н)");
+        if (userInput.equals("y") || userInput.equals("д")) {
+            animals = new DataSeeder().getAnimals();
+        } else {
+            animals = new ArrayList<>();
+        }
 
-        view.showAnimalTable(animals);
+        while (appRunning) {
+            view.showMainMenu();
+            userInput = getUserInput("Введите номер команды: ");
+
+            switch (userInput) {
+                case "1" -> view.showAnimalTable(animals);
+                case "0" -> appRunning = false;
+                default -> view.showMessage("Ошибка! Команда не реализована");
+            }
+
+        }
 
         view.showMessage("Программа завершена");
     }

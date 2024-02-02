@@ -15,6 +15,19 @@ public class ConsoleView implements View{
     }
 
     @Override
+    public void showMainMenu() {
+        System.out.println("╔═══════════════════════════════════════════════╗");
+        System.out.println("║ 1 - Показать весь список                      ║");
+        System.out.println("║ 2 - Добавить животное                         ║");
+        System.out.println("║ 3 - Редактировать животное                    ║");
+        System.out.println("║ 4 - Удалить животное                          ║");
+        System.out.println("║ 5 - Найти животное по имени                   ║");
+        System.out.println("║                                               ║");
+        System.out.println("║ 0 - Выйти из программы                        ║");
+        System.out.println("╚═══════════════════════════════════════════════╝");
+    }
+
+    @Override
     public void showPrompt(String message) {
         System.out.printf(" %32s ", message);
     }
@@ -29,8 +42,12 @@ public class ConsoleView implements View{
     @Override
     public void showAnimalTable(List<Animal> animals) {
         this.showAnimalTableHeader();
-        for (Animal animal : animals) {
-            this.showAnimalTableRow(animal);
+        if (!animals.isEmpty()) {
+            for (Animal animal : animals) {
+                this.showAnimalTableRow(animal);
+            }
+        } else {
+            System.out.println("║                                    Нет данных                                    ║");
         }
         this.showAnimalTableFooter();
     }
