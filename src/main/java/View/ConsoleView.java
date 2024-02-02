@@ -36,17 +36,19 @@ public class ConsoleView implements View{
     }
 
     private void showAnimalTableHeader() {
-        System.out.println("╔══════════════════════════════════════════════════════════════════════════╗");
+        System.out.println("╔══════════════════════════════════════════════════════════════════════════════════╗");
         System.out.print("║");
-        System.out.printf( " %-12s ", "TYPE");
-        System.out.printf( " %-12s ", "NAME");
-        System.out.printf( " %-12s ", "BIRTHDATE");
-        System.out.printf( " %-30s ", "COMMANDS");
+        System.out.printf( " %6s ", "ID");
+        System.out.printf( " %-12s ", "Type");
+        System.out.printf( " %-12s ", "Name");
+        System.out.printf( " %-12s ", "BirthDate");
+        System.out.printf( " %-30s ", "Commands");
         System.out.println( "║");
-        System.out.println("║                                                                          ║");
+        System.out.println("║                                                                                  ║");
     }
     private void showAnimalTableRow(Animal animal) {
         System.out.print("║");
+        System.out.printf(" %6d ", animal.getId());
         System.out.printf(" %-12s ", animal.getType());
         System.out.printf(" %-12s ", animal.getName());
         System.out.printf(" %-12s ", animal.getBirthDate());
@@ -54,6 +56,6 @@ public class ConsoleView implements View{
         System.out.println("║");
     }
     private void showAnimalTableFooter() {
-        System.out.println("╚══════════════════════════════════════════════════════════════════════════╝");
+        System.out.println("╚══════════════════════════════════════════════════════════════════════════════════╝");
     }
 }

@@ -1,8 +1,9 @@
 package Model;
 
-import java.util.ArrayList;
-
 public abstract class Animal {
+
+    protected static Integer lastId = 0;
+    protected Integer id;
     protected String name;
     protected String birthDate;
     protected String commands;
@@ -12,35 +13,31 @@ public abstract class Animal {
         this.name = name;
         this.birthDate = birthDate;
         this.commands = commands;
+        this.id = ++lastId;
     }
+
     public Animal(String name, String birthDate) {
         this(name, birthDate, "");
     }
+
     public Animal(String name) {
         this(name, "", "");
     }
-    public String getName() {
-        return name;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
-    }
-
     public String getCommands() {
         return commands;
-    }
-
-    public void setCommands(String commands) {
-        this.commands = commands;
     }
 
     public String getType() {
@@ -49,6 +46,6 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return type + " | " + name + " | " + birthDate + " | " + commands;
+        return id.toString() + " | " + type + " | " + name + " | " + birthDate + " | " + commands;
     }
 }
