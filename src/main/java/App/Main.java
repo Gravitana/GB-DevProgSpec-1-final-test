@@ -1,17 +1,15 @@
 package App;
 
-import Data.DataSeeder;
-import Model.*;
+import Presenter.Presenter;
+import View.ConsoleView;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<Animal> animals = new DataSeeder().getAnimals();
+        Presenter presenter =new Presenter(new ConsoleView());
+        presenter.start();
 
-        for (Animal animal : animals) {
-            System.out.println(animal);
-        }
     }
 }
