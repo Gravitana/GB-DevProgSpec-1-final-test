@@ -17,11 +17,12 @@ public class ConsoleView implements View{
     @Override
     public void showMainMenu() {
         System.out.println("╔═══════════════════════════════════════════════╗");
-        System.out.println("║ 1 - Показать весь список                      ║");
-        System.out.println("║ 2 - Добавить животное                         ║");
-        System.out.println("║ 3 - Редактировать животное                    ║");
-        System.out.println("║ 4 - Удалить животное                          ║");
-        System.out.println("║ 5 - Найти животное по имени                   ║");
+        System.out.println("║ 1 - Заполнить реестр готовым списком животных ║");
+        System.out.println("║ 2 - Показать весь список                      ║");
+//        System.out.println("║ 3 - Добавить животное                         ║");
+//        System.out.println("║ 4 - Редактировать животное                    ║");
+//        System.out.println("║ 5 - Удалить животное                          ║");
+//        System.out.println("║ 6 - Найти животное по имени                   ║");
         System.out.println("║                                               ║");
         System.out.println("║ 0 - Выйти из программы                        ║");
         System.out.println("╚═══════════════════════════════════════════════╝");
@@ -55,7 +56,7 @@ public class ConsoleView implements View{
         System.out.println("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
         System.out.print("║");
         System.out.printf( " %6s ", "ID");
-        System.out.printf( " %-12s ", "SpeciesAnimals");
+        System.out.printf( " %-12s ", "Species");
         System.out.printf( " %-12s ", "Type");
         System.out.printf( " %-12s ", "Name");
         System.out.printf( " %-12s ", "BirthDate");
