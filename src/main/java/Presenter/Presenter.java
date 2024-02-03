@@ -17,7 +17,7 @@ public class Presenter {
     }
 
     public void start() {
-        List<Animal> animals;
+        List<SpeciesAnimals> animals;
         boolean appRunning = true;
 
         view.showWelcome();

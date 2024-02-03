@@ -1,6 +1,6 @@
 package View;
 
-import Model.Animal;
+import Model.SpeciesAnimals;
 
 import java.util.List;
 
@@ -39,11 +39,10 @@ public class ConsoleView implements View{
         System.out.println("╚═══════════════════════════════════════╝");
     }
 
-    @Override
-    public void showAnimalTable(List<Animal> animals) {
+    public <T extends SpeciesAnimals> void showAnimalTable(List<T> animals) {
         this.showAnimalTableHeader();
         if (!animals.isEmpty()) {
-            for (Animal animal : animals) {
+            for (T animal : animals) {
                 this.showAnimalTableRow(animal);
             }
         } else {
@@ -53,19 +52,21 @@ public class ConsoleView implements View{
     }
 
     private void showAnimalTableHeader() {
-        System.out.println("╔══════════════════════════════════════════════════════════════════════════════════╗");
+        System.out.println("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
         System.out.print("║");
         System.out.printf( " %6s ", "ID");
+        System.out.printf( " %-12s ", "SpeciesAnimals");
         System.out.printf( " %-12s ", "Type");
         System.out.printf( " %-12s ", "Name");
         System.out.printf( " %-12s ", "BirthDate");
         System.out.printf( " %-30s ", "Commands");
         System.out.println( "║");
-        System.out.println("║                                                                                  ║");
+        System.out.println("║                                                                                                ║");
     }
-    private void showAnimalTableRow(Animal animal) {
+    private <T extends SpeciesAnimals> void showAnimalTableRow(T animal) {
         System.out.print("║");
         System.out.printf(" %6d ", animal.getId());
+        System.out.printf(" %-12s ", animal.getSpecies());
         System.out.printf(" %-12s ", animal.getType());
         System.out.printf(" %-12s ", animal.getName());
         System.out.printf(" %-12s ", animal.getBirthDate());
@@ -73,6 +74,6 @@ public class ConsoleView implements View{
         System.out.println("║");
     }
     private void showAnimalTableFooter() {
-        System.out.println("╚══════════════════════════════════════════════════════════════════════════════════╝");
+        System.out.println("╚════════════════════════════════════════════════════════════════════════════════════════════════╝");
     }
 }

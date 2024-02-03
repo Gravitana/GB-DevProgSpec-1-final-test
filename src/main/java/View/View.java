@@ -1,6 +1,6 @@
 package View;
 
-import Model.Animal;
+import Model.SpeciesAnimals;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ public interface View {
     void showMainMenu();
     void showPrompt(String message);
     void showMessage(String message);
-    void showAnimalTable(List<Animal> animals);
+    <T extends SpeciesAnimals> void showAnimalTable(List<T> animals);
 }

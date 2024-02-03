@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf31d31d-1800-4895-bd83-5de79b41a36c" name="Changes" comment="add Id">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
+    <list default="true" id="bf31d31d-1800-4895-bd83-5de79b41a36c" name="Changes" comment="Вывод вида (домашний/вьючный)">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PackAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/PackAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Species.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SpeciesAnimals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/View.java" afterDir="false" />
@@ -106,7 +108,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706891448909</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Главное меню, цикл программы">
+      <option name="closed" value="true" />
+      <created>1706894346661</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706894346662</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Вывод вида (домашний/вьючный)">
+      <option name="closed" value="true" />
+      <created>1706978287514</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706978287514</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +142,8 @@
     <MESSAGE value="схема классов" />
     <MESSAGE value="Presenter, View" />
     <MESSAGE value="add Id" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Id" />
+    <MESSAGE value="Главное меню, цикл программы" />
+    <MESSAGE value="Вывод вида (домашний/вьючный)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вывод вида (домашний/вьючный)" />
   </component>
 </project>

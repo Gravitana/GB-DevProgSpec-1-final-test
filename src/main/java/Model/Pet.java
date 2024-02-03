@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class Pet extends Animal implements Species {
+public abstract class Pet extends Animal implements SpeciesAnimals {
 
     final String specie = "Pet";
 
@@ -14,6 +14,26 @@ public abstract class Pet extends Animal implements Species {
 
     public Pet(String name) {
         super(name);
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public String getCommands() {
+        return commands;
+    }
+
+    public String getType() {
+        return type;
     }
 
     @Override

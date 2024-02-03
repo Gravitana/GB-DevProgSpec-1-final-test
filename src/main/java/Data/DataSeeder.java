@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DataSeeder {
-    public ArrayList<Animal> getAnimals(){
+    public ArrayList<SpeciesAnimals> getAnimals(){
         return new ArrayList<>(Arrays.asList(
                 new Dog("Fido", "2020-01-01", "Sit, Stay, Fetch"),
                 new Cat("Whiskers", "2019-05-15", "Sit, Pounce"),

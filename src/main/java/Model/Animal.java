@@ -24,26 +24,6 @@ public abstract class Animal {
         this(name, "", "");
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public String getCommands() {
-        return commands;
-    }
-
-    public String getType() {
-        return type;
-    }
-
     @Override
     public String toString() {
         return id.toString() + " | " + type + " | " + name + " | " + birthDate + " | " + commands;

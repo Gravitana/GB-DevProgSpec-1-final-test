@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class PackAnimal extends Animal implements Species {
+public abstract class PackAnimal extends Animal implements SpeciesAnimals {
 
     final String specie = "PackAnimal";
 
@@ -17,9 +17,35 @@ public abstract class PackAnimal extends Animal implements Species {
     }
 
     @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    @Override
+    public String getCommands() {
+        return commands;
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
     public String getSpecies() {
         return this.specie;
     }
+
     @Override
     public String toString() {
         return specie + " | " + type + " | " + name + " | " + birthDate + " | " + commands;
