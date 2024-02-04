@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf31d31d-1800-4895-bd83-5de79b41a36c" name="Changes" comment="Вывод вида (домашний/вьючный)">
+    <list default="true" id="bf31d31d-1800-4895-bd83-5de79b41a36c" name="Changes" comment="add animal (cat only)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,16 +41,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GVD_projects/GB-DevProg/Spec-1/03-Java-OOP"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GVD_projects/GB-DevProg/Spec-1/03-Java-OOP&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Presenter" />
@@ -128,7 +137,31 @@
       <option name="project" value="LOCAL" />
       <updated>1706978647756</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Корректировка меню">
+      <option name="closed" value="true" />
+      <created>1706979107386</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706979107386</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add animal (cat only)">
+      <option name="closed" value="true" />
+      <created>1707070070573</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707070070573</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add animal (cat only)">
+      <option name="closed" value="true" />
+      <created>1707070101495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707070101495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +181,8 @@
     <MESSAGE value="add Id" />
     <MESSAGE value="Главное меню, цикл программы" />
     <MESSAGE value="Вывод вида (домашний/вьючный)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вывод вида (домашний/вьючный)" />
+    <MESSAGE value="Корректировка меню" />
+    <MESSAGE value="add animal (cat only)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add animal (cat only)" />
   </component>
 </project>

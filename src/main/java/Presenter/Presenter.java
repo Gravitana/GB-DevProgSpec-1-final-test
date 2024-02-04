@@ -1,12 +1,10 @@
 package Presenter;
 
 
-import Data.DataSeeder;
 import Model.*;
+import Service.AnimalNursery;
 import View.View;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Presenter {
@@ -17,30 +15,24 @@ public class Presenter {
     }
 
     public void start() {
-        List<SpeciesAnimals> animals = new ArrayList<>();
+        AnimalNursery nursery = new AnimalNursery();
+
         boolean appRunning = true;
         String userInput;
 
         view.showWelcome();
-
-//        String userInput = getUserInput("Заполнить реестр готовым списком животных? (д/н)");
-//        if (userInput.equals("y") || userInput.equals("д")) {
-//            animals = new DataSeeder().getAnimals();
-//        } else {
-//            animals = new ArrayList<>();
-//        }
 
         while (appRunning) {
             view.showMainMenu();
             userInput = getUserInput("Введите номер команды: ");
 
             switch (userInput) {
-                case "1" -> animals = new DataSeeder().getAnimals();
-                case "2" -> view.showAnimalTable(animals);
+                case "1" -> nursery.generateNursery();
+                case "2" -> view.showAnimalTable(nursery.getAnimals());
+                case "3" -> addNewAnimal(nursery);
                 case "0" -> appRunning = false;
                 default -> view.showMessage("Ошибка! Команда не реализована");
             }
-
         }
 
         view.showMessage("Программа завершена");
@@ -50,5 +42,40 @@ public class Presenter {
         Scanner in = new Scanner(System.in);
         view.showPrompt(message);
         return in.nextLine();
+    }
+
+    private void addNewAnimal(AnimalNursery nursery) {
+        String name = "";
+        while (name.isEmpty()) {
+            name = getUserInput("Введите имя: ");
+        }
+
+        String birth = "";
+        while (birth.isEmpty()) {
+            birth = getUserInput("Введите дату рождения в формате YYYY-MM-DD: ");
+        }
+
+        String commands = "";
+        while (commands.isEmpty()) {
+            commands = getUserInput("Введите команды через запятую: ");
+        }
+
+        view.showAnimalTypesMenu();
+
+        String animalType = "";
+        while (animalType.isEmpty()) {
+            animalType = getUserInput("Выберите тип животного: ");
+
+            switch (animalType) {
+                case "0" -> { return; }
+                case "1" -> nursery.addAnimal(new Dog(name, birth, commands));
+                case "2" -> nursery.addAnimal(new Cat(name, birth, commands));
+                case "3" -> nursery.addAnimal(new Hamster(name, birth, commands));
+                case "4" -> nursery.addAnimal(new Horse(name, birth, commands));
+                case "5" -> nursery.addAnimal(new Camel(name, birth, commands));
+                case "6" -> nursery.addAnimal(new Donkey(name, birth, commands));
+                default  -> animalType = "";
+            }
+        }
     }
 }

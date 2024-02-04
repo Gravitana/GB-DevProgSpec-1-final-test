@@ -19,13 +19,27 @@ public class ConsoleView implements View{
         System.out.println("╔═══════════════════════════════════════════════╗");
         System.out.println("║ 1 - Заполнить реестр готовым списком животных ║");
         System.out.println("║ 2 - Показать весь список                      ║");
-//        System.out.println("║ 3 - Добавить животное                         ║");
+        System.out.println("║ 3 - Добавить животное                         ║");
 //        System.out.println("║ 4 - Редактировать животное                    ║");
 //        System.out.println("║ 5 - Удалить животное                          ║");
 //        System.out.println("║ 6 - Найти животное по имени                   ║");
         System.out.println("║                                               ║");
         System.out.println("║ 0 - Выйти из программы                        ║");
         System.out.println("╚═══════════════════════════════════════════════╝");
+    }
+
+    @Override
+    public void showAnimalTypesMenu() {
+        System.out.println("╔═══════════════════╗");
+        System.out.println("║ 1 - Собака        ║");
+        System.out.println("║ 2 - Кошка         ║");
+        System.out.println("║ 3 - Хомяк         ║");
+        System.out.println("║ 4 - Лошадь        ║");
+        System.out.println("║ 5 - Верблюд       ║");
+        System.out.println("║ 6 - Осёл          ║");
+        System.out.println("║                   ║");
+        System.out.println("║ 0 - Отмена        ║");
+        System.out.println("╚═══════════════════╝");
     }
 
     @Override
@@ -47,7 +61,7 @@ public class ConsoleView implements View{
                 this.showAnimalTableRow(animal);
             }
         } else {
-            System.out.println("║                                    Нет данных                                    ║");
+            System.out.println("║                                           Нет данных                                           ║");
         }
         this.showAnimalTableFooter();
     }
