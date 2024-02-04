@@ -40,6 +40,10 @@ public abstract class Pet extends Animal implements SpeciesAnimals {
     public String getSpecies() {
         return this.specie;
     }
+
+    public void setCommands(String commands) {
+        this.commands = commands;
+    }
     @Override
     public String toString() {
         return specie + " | " + type + " | " + name + " | " + birthDate + " | " + commands;

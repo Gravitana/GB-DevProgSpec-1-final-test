@@ -30,6 +30,7 @@ public class Presenter {
                 case "1" -> nursery.generateNursery();
                 case "2" -> view.showAnimalTable(nursery.getAnimals());
                 case "3" -> addNewAnimal(nursery);
+                case "4" -> addNewCommand(nursery);
                 case "0" -> appRunning = false;
                 default -> view.showMessage("Ошибка! Команда не реализована");
             }
@@ -62,20 +63,54 @@ public class Presenter {
 
         view.showAnimalTypesMenu();
 
+        SpeciesAnimals animal = null;
         String animalType = "";
         while (animalType.isEmpty()) {
             animalType = getUserInput("Выберите тип животного: ");
 
             switch (animalType) {
                 case "0" -> { return; }
-                case "1" -> nursery.addAnimal(new Dog(name, birth, commands));
-                case "2" -> nursery.addAnimal(new Cat(name, birth, commands));
-                case "3" -> nursery.addAnimal(new Hamster(name, birth, commands));
-                case "4" -> nursery.addAnimal(new Horse(name, birth, commands));
-                case "5" -> nursery.addAnimal(new Camel(name, birth, commands));
-                case "6" -> nursery.addAnimal(new Donkey(name, birth, commands));
+                case "1" -> animal = new Dog(name, birth, commands);
+                case "2" -> animal = new Cat(name, birth, commands);
+                case "3" -> animal = new Hamster(name, birth, commands);
+                case "4" -> animal = new Horse(name, birth, commands);
+                case "5" -> animal = new Camel(name, birth, commands);
+                case "6" -> animal = new Donkey(name, birth, commands);
                 default  -> animalType = "";
             }
+        }
+        nursery.addAnimal(animal);
+        view.showMessage("Животное добавлено");
+        view.showAnimal(animal);
+    }
+
+    private void addNewCommand(AnimalNursery nursery) {
+        view.showAnimalTable(nursery.getAnimals());
+        if (nursery.getAnimals().isEmpty()) {
+            view.showMessage("Ошибка! В питомнике нет животных.");
+            return;
+        }
+
+        String userInput = getUserInput("Введите id животного или 0 для отмены: ");
+        int id = Integer.parseInt(userInput);
+        if (id <= 0) {
+            return;
+        }
+
+        SpeciesAnimals animal = nursery.getAnimalById(id);
+        if (animal != null) {
+            view.showAnimal(animal);
+
+            String commands = "";
+            while (commands.isEmpty()) {
+                commands = getUserInput("Введите новые команды через запятую: ");
+            }
+
+            commands = animal.getCommands() + ", " + commands;
+            animal.setCommands(commands);
+            view.showAnimal(animal);
+        } else {
+            view.showMessage("Ошибка! Животное с id=" + id + " не найдено.");
         }
     }
 }

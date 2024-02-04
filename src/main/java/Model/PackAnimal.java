@@ -46,6 +46,10 @@ public abstract class PackAnimal extends Animal implements SpeciesAnimals {
         return this.specie;
     }
 
+    public void setCommands(String commands) {
+        this.commands = commands;
+    }
+
     @Override
     public String toString() {
         return specie + " | " + type + " | " + name + " | " + birthDate + " | " + commands;

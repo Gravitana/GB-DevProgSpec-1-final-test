@@ -12,4 +12,6 @@ public interface SpeciesAnimals {
     String getType();
 
     String getSpecies();
+
+    void setCommands(String commands);
 }

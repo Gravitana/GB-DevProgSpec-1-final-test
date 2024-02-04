@@ -20,9 +20,7 @@ public class ConsoleView implements View{
         System.out.println("║ 1 - Заполнить реестр готовым списком животных ║");
         System.out.println("║ 2 - Показать весь список                      ║");
         System.out.println("║ 3 - Добавить животное                         ║");
-//        System.out.println("║ 4 - Редактировать животное                    ║");
-//        System.out.println("║ 5 - Удалить животное                          ║");
-//        System.out.println("║ 6 - Найти животное по имени                   ║");
+        System.out.println("║ 4 - Обучить животное новым командам           ║");
         System.out.println("║                                               ║");
         System.out.println("║ 0 - Выйти из программы                        ║");
         System.out.println("╚═══════════════════════════════════════════════╝");
@@ -52,6 +50,13 @@ public class ConsoleView implements View{
         System.out.println("╔═══════════════════════════════════════╗");
         System.out.printf( "║ %-37s ║\n", message);
         System.out.println("╚═══════════════════════════════════════╝");
+    }
+
+    @Override
+    public <T extends SpeciesAnimals> void showAnimal(T animal) {
+        this.showAnimalTableHeader();
+        this.showAnimalTableRow(animal);
+        this.showAnimalTableFooter();
     }
 
     public <T extends SpeciesAnimals> void showAnimalTable(List<T> animals) {
