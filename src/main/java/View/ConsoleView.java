@@ -78,7 +78,7 @@ public class ConsoleView implements View{
         System.out.printf( " %-12s ", "Species");
         System.out.printf( " %-12s ", "Type");
         System.out.printf( " %-12s ", "Name");
-        System.out.printf( " %-12s ", "BirthDate");
+        System.out.printf( " %12s ", "BirthDate");
         System.out.printf( " %-30s ", "Commands");
         System.out.println( "║");
         System.out.println("║                                                                                                ║");
@@ -89,7 +89,7 @@ public class ConsoleView implements View{
         System.out.printf(" %-12s ", animal.getSpecies());
         System.out.printf(" %-12s ", animal.getType());
         System.out.printf(" %-12s ", animal.getName());
-        System.out.printf(" %-12s ", animal.getBirthDate());
+        System.out.printf(" %12s ", animal.getStringBirthDate());
         System.out.printf(" %-30s ", animal.getCommands());
         System.out.println("║");
     }

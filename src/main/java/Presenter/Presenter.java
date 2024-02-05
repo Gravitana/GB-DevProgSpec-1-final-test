@@ -3,8 +3,11 @@ package Presenter;
 
 import Model.*;
 import Service.AnimalNursery;
+import Service.DateHelper;
 import View.View;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Presenter {
@@ -51,9 +54,18 @@ public class Presenter {
             name = getUserInput("Введите имя: ");
         }
 
+        Calendar birthDate = GregorianCalendar.getInstance();
         String birth = "";
+        DateHelper dt = new DateHelper();
         while (birth.isEmpty()) {
-            birth = getUserInput("Введите дату рождения в формате YYYY-MM-DD: ");
+            String dateFormat = "yyyy-MM-dd";
+            birth = getUserInput("Введите дату рождения в формате " + dateFormat + ": ");
+            birthDate = dt.stringToCalendar(birth, dateFormat);
+
+            if (birthDate == null) {
+                view.showMessage("Ошибка! Введена некорректная дата.");
+                birth = "";
+            }
         }
 
         String commands = "";
@@ -70,12 +82,12 @@ public class Presenter {
 
             switch (animalType) {
                 case "0" -> { return; }
-                case "1" -> animal = new Dog(name, birth, commands);
-                case "2" -> animal = new Cat(name, birth, commands);
-                case "3" -> animal = new Hamster(name, birth, commands);
-                case "4" -> animal = new Horse(name, birth, commands);
-                case "5" -> animal = new Camel(name, birth, commands);
-                case "6" -> animal = new Donkey(name, birth, commands);
+                case "1" -> animal = new Dog(name, birthDate, commands);
+                case "2" -> animal = new Cat(name, birthDate, commands);
+                case "3" -> animal = new Hamster(name, birthDate, commands);
+                case "4" -> animal = new Horse(name, birthDate, commands);
+                case "5" -> animal = new Camel(name, birthDate, commands);
+                case "6" -> animal = new Donkey(name, birthDate, commands);
                 default  -> animalType = "";
             }
         }

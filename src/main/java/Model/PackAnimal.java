@@ -1,14 +1,22 @@
 package Model;
 
+import Service.DateHelper;
+
+import java.util.Calendar;
+
 public abstract class PackAnimal extends Animal implements SpeciesAnimals {
 
     final String specie = "PackAnimal";
+
+    public PackAnimal(String name, Calendar birthDate, String commands) {
+        super(name, birthDate, commands);
+    }
 
     public PackAnimal(String name, String birthDate, String commands) {
         super(name, birthDate, commands);
     }
 
-    public PackAnimal(String name, String birthDate) {
+    public PackAnimal(String name, Calendar birthDate) {
         super(name, birthDate);
     }
 
@@ -27,8 +35,12 @@ public abstract class PackAnimal extends Animal implements SpeciesAnimals {
     }
 
     @Override
-    public String getBirthDate() {
+    public Calendar getBirthDate() {
         return birthDate;
+    }
+
+    public String getStringBirthDate() {
+        return new DateHelper().calendarToString(birthDate);
     }
 
     @Override

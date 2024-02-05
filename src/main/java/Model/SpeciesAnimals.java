@@ -1,11 +1,15 @@
 package Model;
 
+import java.util.Calendar;
+
 public interface SpeciesAnimals {
     Integer getId();
 
     String getName();
 
-    String getBirthDate();
+    Calendar getBirthDate();
+
+    String getStringBirthDate();
 
     String getCommands();
 
