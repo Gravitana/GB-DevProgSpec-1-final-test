@@ -12,4 +12,5 @@ public interface View {
     void showMessage(String message);
     <T extends SpeciesAnimals> void showAnimal(T animal);
     <T extends SpeciesAnimals> void showAnimalTable(List<T> animals);
+    void showCount();
 }

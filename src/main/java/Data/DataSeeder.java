@@ -17,9 +17,9 @@ public class DataSeeder {
                 new Dog("Bella", "2019-11-11", "Sit, Stay, Roll"),
                 new Cat("Oliver", "2020-06-30", "Meow, Scratch, Jump"),
 
-                new Horse("Thunder", "2015-07-21", "Trot, Canter, Gallop"),
-                new Camel("Sandy", "2016-11-03", "Walk, Carry Load"),
-                new Donkey("Eeyore", "2017-09-18", "Walk, Carry Load, Bray"),
+//                new Horse("Thunder", "2015-07-21", "Trot, Canter, Gallop"),
+//                new Camel("Sandy", "2016-11-03", "Walk, Carry Load"),
+//                new Donkey("Eeyore", "2017-09-18", "Walk, Carry Load, Bray"),
                 new Horse("Storm", "2014-05-05", "Trot, Canter"),
                 new Camel("Dune", "2018-12-12", "Walk, Sit"),
                 new Donkey("Burro", "2019-01-23", "Walk, Bray, Kick"),

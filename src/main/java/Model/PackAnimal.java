@@ -7,13 +7,16 @@ import java.util.Calendar;
 public abstract class PackAnimal extends Animal implements SpeciesAnimals {
 
     final String specie = "PackAnimal";
+    private static int countAnimals = 0;
 
     public PackAnimal(String name, Calendar birthDate, String commands) {
         super(name, birthDate, commands);
+        ++countAnimals;
     }
 
     public PackAnimal(String name, String birthDate, String commands) {
         super(name, birthDate, commands);
+        ++countAnimals;
     }
 
     public PackAnimal(String name, Calendar birthDate) {
@@ -60,6 +63,10 @@ public abstract class PackAnimal extends Animal implements SpeciesAnimals {
 
     public void setCommands(String commands) {
         this.commands = commands;
+    }
+
+    public static int getCount() {
+        return countAnimals;
     }
 
     @Override

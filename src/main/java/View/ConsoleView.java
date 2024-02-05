@@ -1,5 +1,8 @@
 package View;
 
+import Model.Animal;
+import Model.PackAnimal;
+import Model.Pet;
 import Model.SpeciesAnimals;
 
 import java.util.List;
@@ -22,6 +25,7 @@ public class ConsoleView implements View{
         System.out.println("║ 3 - Добавить животное                         ║");
         System.out.println("║ 4 - Обучить животное новым командам           ║");
         System.out.println("║ 5 - Показать список по году рождения          ║");
+        System.out.println("║ 6 - Показать количество животных              ║");
         System.out.println("║                                               ║");
         System.out.println("║ 0 - Выйти из программы                        ║");
         System.out.println("╚═══════════════════════════════════════════════╝");
@@ -70,6 +74,13 @@ public class ConsoleView implements View{
             System.out.println("║                                           Нет данных                                           ║");
         }
         this.showAnimalTableFooter();
+    }
+    public void showCount() {
+        System.out.println("╔═══════════════════════════════════════╗");
+        System.out.printf( "║ %-37s ║\n", "Домашних животных: " + Pet.getCount());
+        System.out.printf( "║ %-37s ║\n", "Вьючных животных: " + PackAnimal.getCount());
+        System.out.printf( "║ %-37s ║\n", "Всего животных: " + Animal.getCount());
+        System.out.println("╚═══════════════════════════════════════╝");
     }
 
     private void showAnimalTableHeader() {

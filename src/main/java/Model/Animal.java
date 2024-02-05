@@ -13,18 +13,21 @@ public abstract class Animal {
     protected Calendar birthDate;
     protected String commands;
     protected final String type = getClass().getSimpleName();
+    private static int countAnimals = 0;
 
     public Animal(String name, Calendar birthDate, String commands) {
         this.name = name;
         this.birthDate = birthDate;
         this.commands = commands;
         this.id = ++lastId;
+        ++countAnimals;
     }
     public Animal(String name, String birthDate, String commands) {
         this.name = name;
         this.birthDate = new DateHelper().stringToCalendar(birthDate, "yyyy-MM-dd");
         this.commands = commands;
         this.id = ++lastId;
+        ++countAnimals;
     }
 
     public Animal(String name, Calendar birthDate) {
@@ -35,8 +38,7 @@ public abstract class Animal {
         this(name, new GregorianCalendar(), "");
     }
 
-    @Override
-    public String toString() {
-        return id.toString() + " | " + type + " | " + name + " | " + birthDate + " | " + commands;
+    public static int getCount() {
+        return countAnimals;
     }
 }

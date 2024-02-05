@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf31d31d-1800-4895-bd83-5de79b41a36c" name="Changes" comment="birthDate from String to Calendar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/AnimalNursery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/AnimalNursery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ConsoleView.java" afterDir="false" />
+    <list default="true" id="bf31d31d-1800-4895-bd83-5de79b41a36c" name="Changes" comment="Показать количество животных">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SpeciesAnimals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SpeciesAnimals.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Gravitana"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4e17f175-6b16-4c25-83bc-c6cff21f532d" />
+        <option name="url" value="https://github.com/Gravitana/GB-DevProgSpec-1-final-test.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -201,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707152459613</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Показать количество животных">
+      <option name="closed" value="true" />
+      <created>1707160568758</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707160568758</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,6 +245,7 @@
     <MESSAGE value="add an animal" />
     <MESSAGE value="add new commands" />
     <MESSAGE value="birthDate from String to Calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="birthDate from String to Calendar" />
+    <MESSAGE value="Показать количество животных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Показать количество животных" />
   </component>
 </project>

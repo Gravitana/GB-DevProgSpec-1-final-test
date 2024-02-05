@@ -35,6 +35,7 @@ public class Presenter {
                 case "3" -> addNewAnimal(nursery);
                 case "4" -> addNewCommand(nursery);
                 case "5" -> showByYear(nursery);
+                case "6" -> view.showCount();
                 case "0" -> appRunning = false;
                 default -> view.showMessage("Ошибка! Команда не реализована");
             }
