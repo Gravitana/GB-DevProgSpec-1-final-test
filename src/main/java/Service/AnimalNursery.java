@@ -4,6 +4,8 @@ import Data.DataSeeder;
 import Model.SpeciesAnimals;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 public class AnimalNursery {
     private ArrayList<SpeciesAnimals> nursery = new ArrayList<>();
@@ -27,5 +29,20 @@ public class AnimalNursery {
             }
         }
         return null;
+    }
+
+    public List<SpeciesAnimals> getAnimalsByYear(String str) {
+        List<SpeciesAnimals> animals = new ArrayList<>();
+        String year;
+        if (!nursery.isEmpty()) {
+            for (SpeciesAnimals animal : nursery) {
+                year = "" + animal.getBirthDate().get(Calendar.YEAR);
+
+                if (year.equals(str)) {
+                     animals.add(animal);
+                }
+            }
+        }
+        return animals;
     }
 }

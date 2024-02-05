@@ -34,6 +34,7 @@ public class Presenter {
                 case "2" -> view.showAnimalTable(nursery.getAnimals());
                 case "3" -> addNewAnimal(nursery);
                 case "4" -> addNewCommand(nursery);
+                case "5" -> showByYear(nursery);
                 case "0" -> appRunning = false;
                 default -> view.showMessage("Ошибка! Команда не реализована");
             }
@@ -124,5 +125,13 @@ public class Presenter {
         } else {
             view.showMessage("Ошибка! Животное с id=" + id + " не найдено.");
         }
+    }
+
+    private void showByYear(AnimalNursery nursery) {
+        String year = "";
+        while (year.isEmpty()) {
+            year = getUserInput("Введите год рождения: ");
+        }
+        view.showAnimalTable(nursery.getAnimalsByYear(year));
     }
 }

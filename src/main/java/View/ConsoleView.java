@@ -21,6 +21,7 @@ public class ConsoleView implements View{
         System.out.println("║ 2 - Показать весь список                      ║");
         System.out.println("║ 3 - Добавить животное                         ║");
         System.out.println("║ 4 - Обучить животное новым командам           ║");
+        System.out.println("║ 5 - Показать список по году рождения          ║");
         System.out.println("║                                               ║");
         System.out.println("║ 0 - Выйти из программы                        ║");
         System.out.println("╚═══════════════════════════════════════════════╝");
